@@ -1,0 +1,17 @@
+[
+	{
+		"title": "My First Post",
+		"date": "March 1, 2023",
+		"url": "my-first-post.md"
+	},
+	{
+		"title": "My Second Post",
+		"date": "March 5, 2023",
+		"url": "my-second-post.md"
+	},
+	{
+		"title": "My Third Post",
+		"date": "March 8, 2023",
+		"url": "my-third-post.md"
+	}
+]
