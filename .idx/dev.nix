@@ -23,7 +23,7 @@
       enable = true;
       previews = {
         web = {
-          command = ["hugo" "server" "--config" "hugo.toml" "-p" "$PORT" "--bind" "0.0.0.0"];
+          command = ["hugo" "server" "-D" "-p" "$PORT" "--bind" "0.0.0.0"];
           manager = "web";
         };
       };

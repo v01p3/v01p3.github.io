@@ -1,0 +1,15 @@
+name = 'Volpe'
+license = 'MIT'
+licenselink = 'https://github.com/owner/repo/LICENSE'
+description = 'Theme made for Volpe's blog'
+
+# The home page of the theme, where the source can be found
+# homepage = 'https://github.com/owner/repo
+
+# Taxonomy terms
+# tags = ['blog', 'company']
+# features = ['some', 'awesome', 'features']
+
+[author]
+  name = 'Dominik Hofferek'
+  homepage = 'https://v01p3.com/'
