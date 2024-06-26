@@ -5,8 +5,7 @@
   channel = "stable-23.11"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
   packages = [
-    pkgs.nodejs_20
-    pkgs.python3
+    pkgs.go
     pkgs.hugo
   ];
   # Sets environment variables in the workspace
@@ -15,8 +14,6 @@
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
       "GitHub.vscode-pull-request-github"
-      "golang.go"
-      "rusnasonov.vscode-hugo"
     ];
     # Enable previews and customize configuration
     previews = {
