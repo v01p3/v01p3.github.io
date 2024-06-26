@@ -22,3 +22,8 @@ weight = 30
 name = 'Contact'
 pageRef = '/contact'
 weight = 40
+
+[[menus.main]]
+name = 'About'
+pageRef = '/about'
+weight = 50
