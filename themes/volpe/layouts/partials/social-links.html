@@ -1,0 +1,10 @@
+{{ $social := .Site.Params.social }}
+{{ if $social }}
+<ul class="social-links" aria-label="Social links">
+  {{ with $social.github }}<li><a href="https://github.com/{{ . }}" target="_blank" rel="me noopener">GitHub</a></li>{{ end }}
+  {{ with $social.twitter }}<li><a href="https://twitter.com/{{ . }}" target="_blank" rel="me noopener">Twitter</a></li>{{ end }}
+  {{ with $social.mastodon }}<li><a href="{{ . }}" target="_blank" rel="me noopener">Mastodon</a></li>{{ end }}
+  {{ with $social.linkedin }}<li><a href="https://linkedin.com/in/{{ . }}" target="_blank" rel="me noopener">LinkedIn</a></li>{{ end }}
+  {{ with $social.email }}<li><a href="mailto:{{ . }}">Email</a></li>{{ end }}
+</ul>
+{{ end }}

@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ with .OutputFormats.Get "RSS" }}
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
+{{ end }}
+{{ $opts := dict "targetPath" "css/main.css" "outputStyle" (cond hugo.IsProduction "compressed" "expanded") }}
+{{ $style := resources.Get "scss/main.scss" | css.Sass $opts }}
+{{ if hugo.IsProduction }}
+  {{ $style = $style | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
+{{ else }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ end }}
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem("volpe-theme");
+    document.documentElement.setAttribute("data-theme", stored ? stored : "light");
+  } catch (e) {}
+})();
+</script>

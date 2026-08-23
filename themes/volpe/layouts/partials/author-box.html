@@ -1,0 +1,10 @@
+{{ with .Site.Params.author }}
+<aside class="author-box">
+  {{ with $.Site.Params.authorAvatar }}<img class="author-avatar" src="{{ . | relURL }}" alt="{{ $.Site.Params.author }}" loading="lazy">{{ end }}
+  <div class="author-info">
+    <p class="author-name">{{ i18n "writtenBy" }} <strong>{{ . }}</strong></p>
+    {{ with $.Site.Params.authorBio }}<p class="author-bio">{{ . }}</p>{{ end }}
+    {{ partial "social-links.html" $ }}
+  </div>
+</aside>
+{{ end }}

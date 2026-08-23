@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="wrap search-page">
+  <h1 class="page-title">{{ .Title }}</h1>
+  <div class="search-box">
+    <input type="search" id="search-input" placeholder="{{ i18n "searchPlaceholder" }}" autocomplete="off">
+  </div>
+  <ul id="search-results" class="search-results"></ul>
+  <p id="search-empty" class="empty-state" hidden>{{ i18n "searchNoResults" }}</p>
+</div>
+<script src="{{ "js/search.js" | relURL }}" defer data-index="{{ "index.json" | relURL }}"></script>
+{{ end }}

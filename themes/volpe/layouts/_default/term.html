@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="wrap">
+  <h1 class="page-title">{{ .Title }}</h1>
+  {{ $paginator := .Paginate .Pages }}
+  {{ if $paginator.Pages }}
+  <div class="post-list">
+    {{ range $paginator.Pages }}{{ partial "article-card.html" . }}{{ end }}
+  </div>
+  {{ partial "pagination.html" . }}
+  {{ else }}
+  <p class="empty-state">{{ i18n "noPosts" }}</p>
+  {{ end }}
+</div>
+{{ end }}

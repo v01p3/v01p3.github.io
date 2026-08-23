@@ -1,0 +1,27 @@
+// Breakpoints
+$breakpoint-mobile: 600px;
+
+// Color tokens are exposed as CSS custom properties (not SCSS variables)
+// because the theme switches them at runtime via the [data-theme] attribute.
+:root {
+  --bg: #fbfaf8;
+  --bg-elevated: #ffffff;
+  --text: #1c1b19;
+  --text-muted: #706b62;
+  --border: #e8e4dd;
+  --accent: #c2410c;
+  --accent-contrast: #ffffff;
+  --radius: 8px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg: #161513;
+  --bg-elevated: #201f1c;
+  --text: #ece9e3;
+  --text-muted: #a39d92;
+  --border: #34312b;
+  --accent: #ff8a4c;
+  --accent-contrast: #161513;
+}

@@ -1,0 +1,6 @@
+<article class="post-card">
+  <h2 class="post-card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  {{ partial "article-meta.html" . }}
+  {{ with .Summary }}<p class="post-card-summary">{{ . | plainify | truncate 160 }}</p>{{ end }}
+  <a class="read-more" href="{{ .Permalink }}">{{ i18n "readMore" }} →</a>
+</article>

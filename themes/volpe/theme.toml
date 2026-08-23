@@ -1,0 +1,11 @@
+name = "Volpe"
+license = "MIT"
+licenselink = "https://github.com/yourname/volpe/blob/main/LICENSE"
+description = "A minimal, fast, light/dark blog theme for Hugo with tags, categories, client-side search, and an author box."
+homepage = "https://github.com/yourname/volpe"
+tags = ["blog", "minimal", "dark-mode", "search"]
+features = ["dark-mode", "search", "tags", "categories", "author-box"]
+min_version = "0.115.0"
+
+[author]
+  name = "Your Name"

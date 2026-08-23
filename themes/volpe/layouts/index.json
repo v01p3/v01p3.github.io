@@ -1,0 +1,13 @@
+[
+{{ $pages := where site.RegularPages "Layout" "ne" "search" }}
+{{ range $i, $p := $pages }}{{ if $i }},{{ end }}
+{
+  "title": {{ .Title | jsonify }},
+  "url": {{ .RelPermalink | jsonify }},
+  "date": {{ .Date.Format "2006-01-02" | jsonify }},
+  "summary": {{ .Summary | plainify | htmlUnescape | jsonify }},
+  "tags": {{ .Params.tags | jsonify }},
+  "categories": {{ .Params.categories | jsonify }}
+}
+{{ end }}
+]

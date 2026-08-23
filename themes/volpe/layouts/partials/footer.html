@@ -1,0 +1,9 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    {{ partial "social-links.html" . }}
+    <p class="footer-text">
+      © {{ now.Year }} {{ .Site.Params.author | default .Site.Title }}.
+      {{ if .Site.Params.social.rss }}<a href="{{ "index.xml" | relURL }}">RSS</a>{{ end }}
+    </p>
+  </div>
+</footer>

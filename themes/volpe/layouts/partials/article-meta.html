@@ -1,0 +1,10 @@
+<div class="post-meta">
+  <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</time>
+  {{ $mins := div .WordCount 200 }}
+  {{ if lt $mins 1 }}{{ $mins = 1 }}{{ end }}
+  <span class="meta-sep">·</span><span>{{ $mins }} {{ i18n "minRead" }}</span>
+  {{ with .Params.categories }}
+  <span class="meta-sep">·</span>
+  {{ range . }}<a class="meta-tag" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>{{ end }}
+  {{ end }}
+</div>

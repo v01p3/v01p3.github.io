@@ -1,0 +1,49 @@
+baseURL = 'https://example.org/'
+locale = 'en-us'
+title = 'Volpe'
+theme = 'volpe'
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[pagination]
+  pagerSize = 8
+
+[params]
+  description = "A minimal blog."
+  author = "Your Name"
+  authorBio = "Writer, developer, fox enthusiast."
+  authorAvatar = ""
+  dateFormat = "January 2, 2006"
+
+  [params.social]
+    github = ""
+    twitter = ""
+    mastodon = ""
+    linkedin = ""
+    email = ""
+    rss = true
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 2
+
+[[menu.main]]
+  name = "Categories"
+  url = "/categories/"
+  weight = 3
+
+[[menu.main]]
+  name = "Search"
+  url = "/search/"
+  weight = 4

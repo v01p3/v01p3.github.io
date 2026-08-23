@@ -1,0 +1,187 @@
+// Main
+.site-main {
+  padding: 48px 0 64px;
+}
+
+.home-intro {
+  margin-bottom: 40px;
+  color: var(--text-muted);
+}
+
+.page-title {
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+}
+
+// Post list / cards
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.post-card-title {
+  font-size: 1.3rem;
+  margin: 0 0 6px;
+
+  a {
+    color: var(--text);
+  }
+}
+
+.post-card-summary {
+  color: var(--text-muted);
+  margin: 10px 0;
+}
+
+.read-more {
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.post-meta {
+  color: var(--text-muted);
+  font-size: .85rem;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.meta-sep {
+  opacity: .6;
+}
+
+.meta-tag {
+  color: var(--text-muted);
+
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.empty-state {
+  color: var(--text-muted);
+}
+
+// Pagination
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  font-size: .9rem;
+}
+
+.pagination-info {
+  color: var(--text-muted);
+}
+
+// Single post
+.post-header {
+  margin-bottom: 32px;
+}
+
+.post-title {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin: 12px 0 12px;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 1.6rem;
+  }
+}
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 14px 0 0;
+
+  a {
+    font-size: .85rem;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px 12px;
+
+    &:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+  }
+}
+
+.post-content {
+  margin-top: 12px;
+
+  h2, h3 {
+    margin-top: 2em;
+  }
+
+  p, ul, ol {
+    margin: 1em 0;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: var(--radius);
+  }
+
+  pre {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: .85rem;
+  }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: .85em;
+    background: var(--bg-elevated);
+    padding: .15em .4em;
+    border-radius: 4px;
+  }
+
+  pre code {
+    background: none;
+    padding: 0;
+  }
+
+  blockquote {
+    border-left: 3px solid var(--accent);
+    margin: 1.5em 0;
+    padding-left: 16px;
+    color: var(--text-muted);
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+// Taxonomy term list
+.term-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+.term-count {
+  color: var(--text-muted);
+  font-size: .85rem;
+}
