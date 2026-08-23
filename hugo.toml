@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://v01p3.github.io/'
 locale = 'en-us'
 title = 'Volpe'
 theme = 'volpe'
