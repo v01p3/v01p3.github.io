@@ -14,8 +14,8 @@ theme = 'volpe'
   pagerSize = 8
 
 [params]
-  description = "A minimal blog."
-  author = "Your Name"
+  description = "Personal tech blog."
+  author = "Volpe"
   authorBio = "Writer, developer, fox enthusiast."
   authorAvatar = ""
   dateFormat = "January 2, 2006"
